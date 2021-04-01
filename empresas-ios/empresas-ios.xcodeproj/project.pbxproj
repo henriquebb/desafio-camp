@@ -13,6 +13,8 @@
 		BFEE0F69261606B700DAA8FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFEE0F67261606B700DAA8FF /* Main.storyboard */; };
 		BFEE0F6B261606BB00DAA8FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFEE0F6A261606BB00DAA8FF /* Assets.xcassets */; };
 		BFEE0F6E261606BB00DAA8FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFEE0F6C261606BB00DAA8FF /* LaunchScreen.storyboard */; };
+		BFEE0F792616220600DAA8FF /* Rubik-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFEE0F772616220600DAA8FF /* Rubik-VariableFont_wght.ttf */; };
+		BFEE0F7A2616220600DAA8FF /* Rubik-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFEE0F782616220600DAA8FF /* Rubik-Italic-VariableFont_wght.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		BFEE0F6A261606BB00DAA8FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFEE0F6D261606BB00DAA8FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFEE0F6F261606BB00DAA8FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFEE0F772616220600DAA8FF /* Rubik-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		BFEE0F782616220600DAA8FF /* Rubik-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		BFEE0F60261606B700DAA8FF /* empresas-ios */ = {
 			isa = PBXGroup;
 			children = (
+				BFEE0F76261621BA00DAA8FF /* Fonts */,
 				BFEE0F61261606B700DAA8FF /* AppDelegate.swift */,
 				BFEE0F63261606B700DAA8FF /* SceneDelegate.swift */,
 				BFEE0F65261606B700DAA8FF /* ViewController.swift */,
@@ -65,6 +70,15 @@
 				BFEE0F6F261606BB00DAA8FF /* Info.plist */,
 			);
 			path = "empresas-ios";
+			sourceTree = "<group>";
+		};
+		BFEE0F76261621BA00DAA8FF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BFEE0F782616220600DAA8FF /* Rubik-Italic-VariableFont_wght.ttf */,
+				BFEE0F772616220600DAA8FF /* Rubik-VariableFont_wght.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,9 +138,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFEE0F7A2616220600DAA8FF /* Rubik-Italic-VariableFont_wght.ttf in Resources */,
 				BFEE0F6E261606BB00DAA8FF /* LaunchScreen.storyboard in Resources */,
 				BFEE0F6B261606BB00DAA8FF /* Assets.xcassets in Resources */,
 				BFEE0F69261606B700DAA8FF /* Main.storyboard in Resources */,
+				BFEE0F792616220600DAA8FF /* Rubik-VariableFont_wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
