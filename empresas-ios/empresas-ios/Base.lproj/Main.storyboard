@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="234"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KSp-1m-VMP">
-                                <rect key="frame" x="0.0" y="546" width="414" height="316"/>
+                                <rect key="frame" x="0.0" y="479" width="414" height="383"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" id="IW7-ui-Koq"/>
@@ -41,11 +41,11 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="C8p-LF-1YU">
-                                <rect key="frame" x="16" y="254" width="382" height="186"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="C8p-LF-1YU" userLabel="Main Stack View">
+                                <rect key="frame" x="16" y="254" width="382" height="225"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PYg-B9-xag">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="57"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="70"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bl9-G5-EJ0">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="17"/>
@@ -57,7 +57,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sxJ-9Z-PZ7">
-                                                <rect key="frame" x="0.0" y="17" width="382" height="40"/>
+                                                <rect key="frame" x="0.0" y="17" width="382" height="53"/>
                                                 <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Xk2-uS-egR"/>
@@ -73,7 +73,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TLT-nB-d9V">
-                                        <rect key="frame" x="0.0" y="73" width="382" height="57"/>
+                                        <rect key="frame" x="0.0" y="86" width="382" height="70"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9D-OV-4r9">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="17"/>
@@ -85,7 +85,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="plt-Hk-wky">
-                                                <rect key="frame" x="0.0" y="17" width="382" height="40"/>
+                                                <rect key="frame" x="0.0" y="17" width="382" height="53"/>
                                                 <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Itl-gs-eAx"/>
@@ -101,10 +101,10 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q78-7t-b0T">
-                                        <rect key="frame" x="0.0" y="146" width="382" height="40"/>
+                                        <rect key="frame" x="0.0" y="172" width="382" height="53"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffW-93-Cnb">
-                                                <rect key="frame" x="15" y="0.0" width="352" height="40"/>
+                                                <rect key="frame" x="15" y="0.0" width="352" height="53"/>
                                                 <color key="backgroundColor" red="0.8784313725490196" green="0.11764705882352941" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Xfy-rw-Ale"/>
@@ -156,6 +156,7 @@
                         <constraints>
                             <constraint firstItem="C8p-LF-1YU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="3ej-vk-OTM"/>
                             <constraint firstItem="KSp-1m-VMP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="51d-cl-dbS"/>
+                            <constraint firstItem="KSp-1m-VMP" firstAttribute="top" secondItem="C8p-LF-1YU" secondAttribute="bottom" id="5Ih-c8-myo"/>
                             <constraint firstItem="C8p-LF-1YU" firstAttribute="height" secondItem="5eO-ov-QsC" secondAttribute="height" multiplier="2" id="5ku-Lj-oso"/>
                             <constraint firstItem="KSp-1m-VMP" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="6fT-iM-E3Q"/>
                             <constraint firstItem="KSp-1m-VMP" firstAttribute="height" secondItem="5eO-ov-QsC" secondAttribute="height" priority="750" id="7l8-rj-o3n"/>
@@ -184,6 +185,7 @@
                             <mask key="constraints">
                                 <include reference="5ku-Lj-oso"/>
                                 <exclude reference="hIb-Qt-mfG"/>
+                                <exclude reference="5Ih-c8-myo"/>
                                 <include reference="hEX-fh-KAz"/>
                                 <exclude reference="xF6-xb-gRV"/>
                             </mask>
