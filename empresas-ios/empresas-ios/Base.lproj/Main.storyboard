@@ -141,6 +141,14 @@
                                     <constraint firstAttribute="width" constant="50" id="dm3-FM-DS1"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbA-cU-V4Z">
+                                <rect key="frame" x="362" y="372.5" width="26" height="22"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <color key="tintColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="eye" catalog="system"/>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seja bem vindo ao empresas!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEk-tQ-h5l">
                                 <rect key="frame" x="0.0" y="142" width="414" height="21"/>
                                 <constraints>
@@ -163,7 +171,9 @@
                             <constraint firstItem="5eO-ov-QsC" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="AUe-8E-5Tp"/>
                             <constraint firstItem="C8p-LF-1YU" firstAttribute="top" secondItem="5eO-ov-QsC" secondAttribute="bottom" constant="20" id="Adt-YU-CGg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C8p-LF-1YU" secondAttribute="trailing" constant="16" id="AfQ-4r-YsL"/>
+                            <constraint firstItem="xbA-cU-V4Z" firstAttribute="centerY" secondItem="plt-Hk-wky" secondAttribute="centerY" id="JbP-5a-ckg"/>
                             <constraint firstItem="SlK-4r-3uj" firstAttribute="centerY" secondItem="5eO-ov-QsC" secondAttribute="centerY" id="SeP-8J-OFO"/>
+                            <constraint firstItem="xbA-cU-V4Z" firstAttribute="trailing" secondItem="plt-Hk-wky" secondAttribute="trailing" constant="-10" id="U3W-ca-mFF"/>
                             <constraint firstItem="5eO-ov-QsC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ZIX-ko-qiM"/>
                             <constraint firstItem="KSp-1m-VMP" firstAttribute="top" secondItem="C8p-LF-1YU" secondAttribute="bottom" constant="5" id="hEX-fh-KAz"/>
                             <constraint firstItem="C8p-LF-1YU" firstAttribute="height" secondItem="5eO-ov-QsC" secondAttribute="height" multiplier="1.4" priority="750" id="hIb-Qt-mfG"/>
@@ -311,6 +321,7 @@
     </scenes>
     <resources>
         <image name="empresas_header" width="375" height="67"/>
+        <image name="eye" catalog="system" width="128" height="81"/>
         <image name="home_background" width="375" height="188"/>
         <image name="home_logo_1" width="258" height="191"/>
         <image name="home_logo_2" width="101" height="125"/>
