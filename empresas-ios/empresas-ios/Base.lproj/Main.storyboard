@@ -63,7 +63,7 @@
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Xk2-uS-egR"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" textContentType="email"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                         <integer key="value" value="4"/>
@@ -91,7 +91,7 @@
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Itl-gs-eAx"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                         <integer key="value" value="4"/>
@@ -118,6 +118,9 @@
                                                         <integer key="value" value="8"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="logIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SIF-s2-iV7"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -148,6 +151,10 @@
                                 </accessibility>
                                 <color key="tintColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" image="eye" catalog="system"/>
+                                <state key="selected" image="eye.slash" catalog="system"/>
+                                <connections>
+                                    <action selector="changePasswordVisibility:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j6J-JX-GQp"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seja bem vindo ao empresas!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEk-tQ-h5l">
                                 <rect key="frame" x="0.0" y="142" width="414" height="21"/>
@@ -201,6 +208,10 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="sxJ-9Z-PZ7" id="4bn-VB-6gW"/>
+                        <outlet property="passwordTextField" destination="plt-Hk-wky" id="Jto-KX-2DJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -322,6 +333,7 @@
     <resources>
         <image name="empresas_header" width="375" height="67"/>
         <image name="eye" catalog="system" width="128" height="81"/>
+        <image name="eye.slash" catalog="system" width="128" height="86"/>
         <image name="home_background" width="375" height="188"/>
         <image name="home_logo_1" width="258" height="191"/>
         <image name="home_logo_2" width="101" height="125"/>
