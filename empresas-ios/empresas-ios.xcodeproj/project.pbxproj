@@ -14,6 +14,7 @@
 		BF27886B261A71F900442254 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF27886A261A71F900442254 /* UserData.swift */; };
 		BF2C48D2261D1EDA00E86B93 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C48D1261D1EDA00E86B93 /* Endpoint.swift */; };
 		BF2C48D8261D1FBD00E86B93 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C48D7261D1FBD00E86B93 /* Networking.swift */; };
+		BF2C48EF261DDC1100E86B93 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C48EE261DDC1100E86B93 /* HomeViewController.swift */; };
 		BF72C975261BF023006B20D3 /* Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF72C974261BF023006B20D3 /* Paths.swift */; };
 		BFEE0F62261606B700DAA8FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEE0F61261606B700DAA8FF /* AppDelegate.swift */; };
 		BFEE0F64261606B700DAA8FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEE0F63261606B700DAA8FF /* SceneDelegate.swift */; };
@@ -37,6 +38,7 @@
 		BF2C48CE261D1E8C00E86B93 /* Paths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paths.swift; sourceTree = "<group>"; };
 		BF2C48D1261D1EDA00E86B93 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		BF2C48D7261D1FBD00E86B93 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		BF2C48EE261DDC1100E86B93 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BF72C971261BE676006B20D3 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		BF72C974261BF023006B20D3 /* Paths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paths.swift; sourceTree = "<group>"; };
 		BFEE0F5E261606B700DAA8FF /* empresas-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "empresas-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +120,7 @@
 				BF2C48CE261D1E8C00E86B93 /* Paths.swift */,
 				BF2C48D1261D1EDA00E86B93 /* Endpoint.swift */,
 				BF2C48D7261D1FBD00E86B93 /* Networking.swift */,
+				BF2C48EE261DDC1100E86B93 /* HomeViewController.swift */,
 			);
 			path = "empresas-ios";
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				BF27886B261A71F900442254 /* UserData.swift in Sources */,
 				BFEE0F62261606B700DAA8FF /* AppDelegate.swift in Sources */,
 				BF278861261A148B00442254 /* Portfolio.swift in Sources */,
+				BF2C48EF261DDC1100E86B93 /* HomeViewController.swift in Sources */,
 				BF72C975261BF023006B20D3 /* Paths.swift in Sources */,
 				BFEE0F64261606B700DAA8FF /* SceneDelegate.swift in Sources */,
 				BF27885B2619034F00442254 /* User.swift in Sources */,

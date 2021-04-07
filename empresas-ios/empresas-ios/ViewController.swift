@@ -16,6 +16,11 @@ class ViewController: UIViewController {
     var network = Networking()
     var user = User()
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.navigationBar.isHidden = true
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -39,6 +44,7 @@ class ViewController: UIViewController {
             self.user.userId = self.network.getHeaderValue(forKey: "uid")
 
             MBProgressHUD.hide(for: self.view, animated: true)
+            self.performSegue(withIdentifier: "goToHomeViewController", sender: self)
         }
     }
 
