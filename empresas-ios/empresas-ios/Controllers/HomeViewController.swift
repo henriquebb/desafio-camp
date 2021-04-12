@@ -84,8 +84,9 @@ extension HomeViewController: UISearchBarDelegate {
             self.enterprisesSchema = self.network.decodeFromJSON(type: Enterprises.self, data: data)
             if self.enterprisesSchema?.enterprises?.count == 0 {
                 self.createTableViewLabelHeader()
-            }
+            } else {
             self.tableView.tableHeaderView = nil
+            }
             self.tableView.reloadData()
             self.spinner?.stopAnimating()
         }
@@ -106,7 +107,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 {
-            return 20
+            return 25
         } else {
             return 0
         }
@@ -115,9 +116,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 0 {
             let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 20))
-            let labelView = UILabel(frame: CGRect(x: 16, y: 0, width: tableView.frame.width, height: 20))
+            let labelView = UILabel(frame: CGRect(x: 16, y: -10, width: tableView.frame.width, height: 20))
             labelView.font = UIFont(name: "Rubik", size: 18)
             labelView.text = "\(String(self.enterprisesSchema?.enterprises?.count ?? 0)) Resultados encontrados"
+            labelView.textColor = UIColor(red: 0.4, green: 0.4, blue: 0.4, alpha: 1)
             view.addSubview(labelView)
             return view
         } else {
@@ -126,13 +128,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 50))
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 8))
         view.backgroundColor = .clear
         return view
-    }
-
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 10.0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -144,9 +142,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         else { return UITableViewCell() }
 
         let colors = [Color.blue, Color.pink, Color.green]
+
         cell.companyBackgroundView.backgroundColor = colors.randomElement()
-        cell.companyLabel.text = self.enterprisesSchema?.enterprises?[indexPath.section].enterpriseName
         cell.selectionStyle = .none
+        cell.companyLabel.text = self.enterprisesSchema?.enterprises?[indexPath.section].enterpriseName
         return cell
     }
 
@@ -169,12 +168,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.tableHeaderView?
             .centerXAnchor
             .constraint(equalTo: self.tableView.centerXAnchor).isActive = true
-        tableView.layoutIfNeeded()
     }
 
     private func createTableViewLabelHeader() {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 0, height: 17))
         label.text = "Nenhum resultado encontrado"
+        label.textColor = UIColor(red: 0.4, green: 0.4, blue: 0.4, alpha: 1)
         label.textAlignment = .center
         setTableViewHeader(label)
     }
@@ -201,7 +200,7 @@ extension HomeViewController: UIGestureRecognizerDelegate {
         tableView.addGestureRecognizer(tableViewTap)
     }
 
-    @objc func handleTableViewTap(_ sender: UITapGestureRecognizer) {
+    @objc private func handleTableViewTap(_ sender: UITapGestureRecognizer) {
         UIView.animate(withDuration: 0.35) {
             self.backgroundImageHeightConstraint.constant = 200
             self.searchBarTopConstraint.constant = 180
@@ -284,7 +283,7 @@ extension HomeViewController {
                                                object: nil)
     }
 
-    @objc func keyboardWillShow(notification: NSNotification) {
+    @objc private func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize =
             (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             constraint = tableView
@@ -296,7 +295,7 @@ extension HomeViewController {
 
     }
 
-    @objc func keyboardWillHide(notification: NSNotification) {
+    @objc private func keyboardWillHide(notification: NSNotification) {
         if let keyboardSize =
             (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             constraint?.isActive = false

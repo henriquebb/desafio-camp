@@ -40,10 +40,29 @@ extension CompanyDetailViewController {
         companyName.text = companyTitle ?? ""
     }
 
+    private func configureNavigationBar(_ navigationBar: UINavigationBar) {
+        navigationBar.tintColor = .gray
+        navigationBar.barTintColor = .white
+        navigationBar.backItem?.title = ""
+        navigationBar.isHidden = false
+    }
+
+    private func configureNavigationItem(_ barButton: UIBarButtonItem) {
+        navigationItem.leftBarButtonItem = barButton
+        navigationItem.title = companyTitle ?? ""
+    }
+
     private func styleNavigationBar() {
         guard let navigationBar = self.navigationController?.navigationBar else {
             return
         }
+
+        let barButton = UIBarButtonItem(customView: createButton())
+        configureNavigationItem(barButton)
+        configureNavigationBar(navigationBar)
+    }
+
+    private func createButton() -> UIButton {
         let image = UIImage(named: "back_arrow")
         let button = UIButton()
         button.setImage(image, for: .normal)
@@ -51,14 +70,7 @@ extension CompanyDetailViewController {
         button.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1)
         button.layer.cornerRadius = 4
         button.addTarget(self, action: #selector(goBack), for: UIControl.Event.touchUpInside)
-
-        let barButton = UIBarButtonItem(customView: button)
-        navigationItem.leftBarButtonItem = barButton
-        navigationBar.tintColor = .gray
-        navigationBar.barTintColor = .white
-        navigationBar.backItem?.title = ""
-        navigationBar.isHidden = false
-        navigationItem.title = companyTitle ?? ""
+        return button
     }
 }
 
@@ -66,7 +78,7 @@ extension CompanyDetailViewController {
 
 extension CompanyDetailViewController {
 
-    @objc func goBack() {
+    @objc private func goBack() {
         self.navigationController?.popViewController(animated: true)
     }
 }

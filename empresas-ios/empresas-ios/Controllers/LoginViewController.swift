@@ -24,6 +24,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var bottomViewToMainStackViewConstraint: NSLayoutConstraint!
+    @IBOutlet weak var bottomViewTopToMainStackView: NSLayoutConstraint!
     // MARK: - Variables
 
     var network = Networking()
@@ -203,7 +204,7 @@ extension LoginViewController {
                                                object: nil)
     }
 
-    @objc func keyboardWillShow(notification: NSNotification) {
+    @objc private func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize =
             (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             bottomViewToMainStackViewConstraint.constant = keyboardSize.height/2
@@ -213,7 +214,7 @@ extension LoginViewController {
 
     }
 
-    @objc func keyboardWillHide(notification: NSNotification) {
+    @objc private func keyboardWillHide(notification: NSNotification) {
         bottomViewToMainStackViewConstraint.constant = 0
         welcomeLabel.isHidden = false
     }
