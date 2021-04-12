@@ -1,20 +1,36 @@
 PODS:
-  - MBProgressHUD (1.2.0)
+  - MaterialComponents/ActivityIndicator (124.1.1):
+    - MaterialComponents/Palettes
+    - MaterialComponents/private/Application
+    - MDFInternationalization
+    - MotionAnimator (~> 4.0)
+  - MaterialComponents/Palettes (124.1.1)
+  - MaterialComponents/private/Application (124.1.1)
+  - MDFInternationalization (2.0.0)
+  - MotionAnimator (4.0.1):
+    - MotionInterchange (~> 3.0)
+  - MotionInterchange (3.0.0)
   - SwiftLint (0.43.1)
 
 DEPENDENCIES:
-  - MBProgressHUD (~> 1.2.0)
+  - MaterialComponents/ActivityIndicator
   - SwiftLint
 
 SPEC REPOS:
   trunk:
-    - MBProgressHUD
+    - MaterialComponents
+    - MDFInternationalization
+    - MotionAnimator
+    - MotionInterchange
     - SwiftLint
 
 SPEC CHECKSUMS:
-  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MaterialComponents: b9f58f24bf74588a83b2dce05802a11aaed5257d
+  MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
+  MotionAnimator: 5f99d7c9592928c0f28a66283eda9c3b657dc480
+  MotionInterchange: 13adae439b377e31d1674cc165539d50e1d1566a
   SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
 
-PODFILE CHECKSUM: 0b7d8a9a2e3bc27ede3ecea93e75aca1ef21abe5
+PODFILE CHECKSUM: 9fd9499ef174f581bb2b65f856790d0cac7ea734
 
 COCOAPODS: 1.9.1

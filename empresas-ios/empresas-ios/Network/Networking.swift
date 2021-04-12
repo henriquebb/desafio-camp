@@ -20,7 +20,7 @@ class Networking {
 
     func request(url: URL,
                  method: HttpMethod,
-                 header: [String: String],
+                 header: [String: String]?,
                  body: Data?,
                  completion: @escaping (_: Data, _: HTTPURLResponse) -> Void) {
 
@@ -61,7 +61,7 @@ class Networking {
             return nil
         }
     }
-    
+
     func getHeaderValue(forKey: String) -> String {
         return header?[forKey] as? String ?? ""
     }

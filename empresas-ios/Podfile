@@ -8,6 +8,6 @@ target 'empresas-ios' do
   # Pods for empresas-ios
 
   pod 'SwiftLint'
-  pod 'MBProgressHUD', '~> 1.2.0'
+  pod 'MaterialComponents/ActivityIndicator'
 
 end
